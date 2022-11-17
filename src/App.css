@@ -1,0 +1,11 @@
+/* define primary color */
+:root {
+  --color-primary: #99cc00;
+}
+
+.main-container {
+  max-width: 1140px;
+}
+#tsparticles{
+  opacity: 0.4;
+}
