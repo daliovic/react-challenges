@@ -5,7 +5,8 @@ import './Navbar.css'
 
 export default function Navbar() {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-none start-50 translate-middle-x position-absolute '>
+    <nav className='navbar navbar-expand-lg navbar-dark start-50 translate-middle-x position-fixed '
+    style={{background:"rgba(10, 16, 30)"}}>
       <div className='container-fluid'>
         <button
           className='navbar-toggler'

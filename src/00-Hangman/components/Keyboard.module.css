@@ -1,22 +1,23 @@
 .btn {
-    width: 100%;
-    border: 1px solid #000;
-    background: none;
-    aspect-ratio: 1/1;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
+  width: 100%;
+  border: 1px solid #000;
+  background: none;
+  aspect-ratio: 1/1;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
 }
-.btn.active{
-    background: rgb(201, 107, 255);
-    color: #fff;
+.btn.active {
+  background: var(--color-primary);
+  color: #fff;
 }
-.btn.inactive{
-    opacity: 0.3;
+.btn.inactive {
+  opacity: 0.3;
 }
-.btn:hover:not(:disabled), .btn:focus {
-    background-color: rgb(238, 212, 255);
+.btn:hover:not(:disabled),
+.btn:focus {
+  background-color:  var(--color-light);
 }

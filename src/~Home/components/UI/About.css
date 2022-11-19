@@ -5,13 +5,15 @@
   left: 0;
   right: 0;
   padding: 0;
-  height: calc(90vh);
-  background-color: #0a101e;
+  min-height: calc(90vh);
+  background-color: rgba(10, 16, 30, 0.7);
+  /* background-color: rgb(176, 181, 192); */
+  /* q: what is #0a101e in rgba */
   margin: 0;
   z-index: 1;
+  margin-bottom: 20px;
 }
-.section.about{
-  
+.section.about {
   padding-top: 100px;
 }
 .section {
@@ -68,4 +70,8 @@
   background-color: var(--color-primary);
   border-radius: 50px;
   min-width: 170px;
+}
+.about button:hover {
+  background-color: white;
+  color: var(--color-primary);
 }

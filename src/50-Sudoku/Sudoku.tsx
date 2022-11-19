@@ -18,7 +18,7 @@ export default function Sudoku() {
   const solveSudoku = (board: Board) => {
     let newBoard = board.sudoku[0].replace(/ /g, '.')
     // let newBoard = board.sudoku[0]
-    console.log({ sudoku: [newBoard] })
+    // console.log({ sudoku: [newBoard] })
 
     fetch('http://localhost:9090/http://127.0.0.1:5000', {
       method: 'POST',

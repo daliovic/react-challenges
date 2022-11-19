@@ -5,7 +5,7 @@ type infoType = {
 }
 import myPhoto from '../../../assets/graphics/Me Dark Background square.jpg'
 const info: infoType = {
-  'Full Name': 'Mohamed Ali',
+  'Full Name': 'Mohamed Ali Ben Thaier',
   Age: 27,
   Nationality: 'Tunisian',
   Residency: 'İzmit Turkiye',
@@ -44,6 +44,8 @@ export default function About() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className='mt-auto'>
               <button className='btn'>Download CV</button>
             </div>
           </div>

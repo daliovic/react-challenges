@@ -1,11 +1,29 @@
 /* define primary color */
 :root {
   --color-primary: #99cc00;
+  --color-light:#dbf58f;
 }
 
 .main-container {
   max-width: 1140px;
+  /* overflow: hidden; */
+  /* overflow-y: hidden; */
+  height: 100%;
 }
 #tsparticles{
   opacity: 0.4;
+}
+
+.button {
+  font-size: 1.2rem;
+  font-family: poppins;
+  font-weight: 500;
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  min-width: 170px;
+  border: none;
+}
+.button:hover {
+  background-color: white;
+  color: var(--color-primary);
 }
