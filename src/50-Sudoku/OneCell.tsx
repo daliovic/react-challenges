@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 
 export default function OneCell({
   changeHandler,
@@ -9,16 +9,22 @@ export default function OneCell({
   index: number
   initialBoardCell: string
 }) {
-  const [inputValue, setInputValue] = useState(() => (initialBoardCell == ' ' ? '' : initialBoardCell))
+  const [inputValue, setInputValue] = useState(() => (initialBoardCell == '.' ? '' : initialBoardCell))
   const ref = useRef<HTMLInputElement>(null)
-  const applyRightBorder = (index - 2) % 9 == 0 || (index - 5) % 9 == 0
-  const applyBotBorder = (index >= 18 && index <= 26) || (index >= 45 && index <= 53)
+  const applyRightBorder = (index - 2) % 9 == 0 || (index - 5) % 9 == 0 || (index - 8) % 9 == 0
+  const applyBotBorder = (index >= 18 && index <= 26) || (index >= 45 && index <= 53) || index >= 72
+
+  const deleteHandler = (e: KeyboardEvent) => {
+    if (e.key === 'Backspace' || e.key === 'Delete') {
+      setInputValue('')
+    }
+  }
   return (
     <input
       type='text'
       style={{
-        borderRight: applyRightBorder ? '3px solid black' : ' ',
-        borderBottom: applyBotBorder ? '3px solid black' : ' ',
+        // borderRight: applyRightBorder ? '3px solid black' : ' ',
+        // borderBottom: applyBotBorder ? '3px solid black' : ' ',
       }}
       maxLength={1}
       onChange={(e) => {
@@ -30,8 +36,13 @@ export default function OneCell({
       id={'' + index}
       ref={ref}
       value={inputValue}
+      onKeyDown={(e) => {
+        if (e.key === 'Backspace' || e.key === 'Delete') {
+          setInputValue('')
+        }
+      }}
+      // readOnly={inputValue.length>0}
       autoComplete='off'
-      
     />
   )
 }

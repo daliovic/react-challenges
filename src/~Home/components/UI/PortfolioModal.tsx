@@ -2,24 +2,31 @@ import React, { useState } from 'react'
 
 import Modal from 'react-bootstrap/Modal'
 
-export default function PortfolioModal({ component, title }: { component: JSX.Element; title: string }) {
-  const [show, setShow] = useState(false)
-
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+export default function PortfolioModal({
+  component,
+  title,
+  show,
+  handleShow,
+  handleHide,
+}: {
+  component: any
+  title: string
+  show: boolean
+  handleShow(): void
+  handleHide(): void
+}) {
+  // const handleClose = () => setShow(false)
+  // const handleShow = () => setShow(true)
 
   return (
     <>
       {/* <Button variant='btn' onClick={handleShow}>
         Launch demo modal
       </Button> */}
-      <button className='btn' onClick={handleShow}>
-        Show
-      </button>
 
       <Modal
         show={show}
-        onHide={handleClose}
+        onHide={handleHide}
         centered
         size='xl'
         dialogClassName='h-75'
@@ -28,9 +35,9 @@ export default function PortfolioModal({ component, title }: { component: JSX.El
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{component}</Modal.Body>
+        {<Modal.Body>{component()}</Modal.Body>}
         <Modal.Footer>
-          <button className='modal-button' onClick={handleClose}>
+          <button className='modal-button' onClick={handleHide}>
             Close
           </button>
         </Modal.Footer>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import bg from '../../../assets/graphics/CardBG.svg'
 import PortfolioModal from './PortfolioModal'
@@ -11,7 +11,7 @@ export default function PortfolioCard({
 }: {
   title: string
   description: string
-  component: JSX.Element
+  component: any
   index: number
 }) {
   const overlayVariants = {
@@ -54,7 +54,13 @@ export default function PortfolioCard({
     },
   }
 
-
+  const [show, setShow] = useState(false)
+  const handleShow = () => {
+    setShow(true)
+  }
+  const handleHide = () => {
+    setShow(false)
+  }
 
   return (
     <motion.div
@@ -64,20 +70,33 @@ export default function PortfolioCard({
       whileHover='visible'
       animate='hidden'
       variants={cardVariants}
-    //   style={{ backgroundImage: `url(${bg})`,}}
-      >
+      //   style={{ backgroundImage: `url(${bg})`,}}
+    >
       <motion.div
         variants={overlayVariants}
+        // onClick={handleShow}
         className='card-overlay d-flex flex-wrap justify-content-center align-items-center'>
         <div className='col-12 text-center'>
           <p>{description}</p>
         </div>
         <div>
-          <PortfolioModal component={component} title={title}/>
+          <button className='btn' onClick={handleShow}>
+            Show
+          </button>
+
+          {show && (
+            <PortfolioModal
+              show={show}
+              component={component}
+              title={title}
+              handleShow={handleShow}
+              handleHide={handleHide}
+            />
+          )}
         </div>
       </motion.div>
       <div className=''>
-        <h1>#{index+1}</h1>
+        <h1>#{index + 1}</h1>
       </div>
       <div>
         <p>{title}</p>

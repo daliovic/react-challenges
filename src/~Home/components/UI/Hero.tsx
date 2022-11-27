@@ -9,7 +9,6 @@ export default function Hero() {
         <h1 className=''>Mohamed Ali</h1>
         <h2 className=''>Frontend Developer | ReactJS - Typescript</h2>
         <button className='btn'>Hire Me</button>
-        <input></input>
       </div>
 
     </div>

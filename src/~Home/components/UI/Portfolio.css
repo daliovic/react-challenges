@@ -45,3 +45,46 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+.btn-close {
+  box-sizing: content-box !important;
+  width: 1em !important;
+  height: 1em !important;
+  padding: 0.25em 0.25em !important;
+  color: #000 !important;
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat !important;
+  border: 0 !important;
+  border-radius: 0.375rem !important;
+  opacity: 0.5 !important;
+  min-width: 1em !important;
+}
+.modal button {
+  font-size: 0.9rem;
+  font-family: poppins;
+  font-weight: 500;
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  border: none;
+  padding: 5px 15px;
+  border: transparent solid 1px;
+  color: white;
+}
+.modal button:hover {
+  background-color: white;
+  color: var(--color-primary);
+  border: var(--color-primary) solid 1px;
+}
+.modal-button {
+  font-size: 1.2rem!important;
+  font-family: poppins;
+  font-weight: 500;
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  min-width: 170px;
+}
+.modal-button:hover {
+  background-color: white;
+  color: var(--color-primary);
+}

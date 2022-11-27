@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HEAD = (<div style={{
+const HEAD = (<div key="HEAD" style={{
     width: '25px',
     height: '25px',
     borderRadius: '50%',
@@ -10,7 +10,7 @@ const HEAD = (<div style={{
     right: '-10px',
 }
 }></div>)
-const BODY = (<div style={{
+const BODY = (<div key="BODY" style={{
     width: '5px',
     height: '60px',
     background: 'black',
@@ -19,7 +19,7 @@ const BODY = (<div style={{
     right: '0px',
 }
 }></div>)
-const RIGHT_ARM = (<div style={{
+const RIGHT_ARM = (<div key="RIGHT_ARM" style={{
     width: '50px',
     height: '5px',
     background: 'black',
@@ -30,7 +30,7 @@ const RIGHT_ARM = (<div style={{
     transformOrigin: 'left bottom',
 }
 }></div>)
-const LEFT_ARM = (<div style={{
+const LEFT_ARM = (<div key="LEFT_ARM" style={{
     width: '50px',
     height: '5px',
     background: 'black',
@@ -41,7 +41,7 @@ const LEFT_ARM = (<div style={{
     transformOrigin: 'right bottom',
 }
 }></div>)
-const RIGHT_LEG = (<div style={{
+const RIGHT_LEG = (<div key="RIGHT_LEG" style={{
     width: '50px',
     height: '5px',
     background: 'black',
@@ -52,7 +52,7 @@ const RIGHT_LEG = (<div style={{
     transformOrigin: 'left bottom',
 }
 }></div>)
-const LEFT_LEG = (<div style={{
+const LEFT_LEG = (<div key="LEFT_LEG" style={{
     width: '50px',
     height: '5px',
     background: 'black',
