@@ -19,9 +19,9 @@ export default function Typewriter() {
   }
 
   return (
-    <div style={{whiteSpace: "pre-line"}}>
+    <div style={{ whiteSpace: 'pre-line' }}>
       <div style={{ margin: 'auto', width: '70%', paddingTop: 40 }}>
-        This simply displays a nested object. It is not interactive yet.
+        This simply displays a given nested object entries Recursively. It is not interactive yet.
         <i>{`\n{taxi: 'a car licensed to transport passengers in return for payment of a fare',
     food: {
       sushi: 'a traditional Japanese dish of prepared rice accompanied by seafood and vegetables',

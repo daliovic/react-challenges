@@ -23,13 +23,14 @@
 }
 
 .card-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #050a1ae1;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 4px;
+  border-radius: 0px;
+  padding: 0 10px;
 }
 
 .modal-button {
@@ -77,7 +78,7 @@
   border: var(--color-primary) solid 1px;
 }
 .modal-button {
-  font-size: 1.2rem!important;
+  font-size: 1.2rem !important;
   font-family: poppins;
   font-weight: 500;
   background-color: var(--color-primary);
@@ -87,4 +88,33 @@
 .modal-button:hover {
   background-color: white;
   color: var(--color-primary);
+}
+
+.carousel-caption h3 {
+  color: black !important;
+}
+
+.carousel-indicators button {
+  border-radius: 0px;
+  min-width: 0px;
+  max-height: 3px;
+}
+
+.carousel {
+  position: relative !important;
+}
+
+.carousel::before {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+.active .carousel-item {
+  background-color: #000 !important;
+}
+
+.section-wrapper.portfolio-section {
+  background-color: rgb(17, 23, 36);
+  padding: 0 0 150px 0;
 }

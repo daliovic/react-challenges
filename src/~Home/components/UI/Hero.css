@@ -10,6 +10,7 @@
   /* background-color: #0a101e; */
   z-index: 1;
   position: relative;
+  max-width: 1140px;
 }
 .hero h1 {
   font-size: 6rem;

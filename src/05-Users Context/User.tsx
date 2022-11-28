@@ -28,7 +28,10 @@ export default function User() {
     <>
       {}
       {Object.entries(ctx?.users as object).map((item, i) => (
-        <div key={i}>{`${item[0]} ${item[1] ? 'Online' : 'Offline'}`}</div>
+        <div key={i} className='d-flex w-50'>
+          <div className='col-3'>{`${item[0]}`}</div>
+          <div className='col-3'>{`${item[1] ? '🟢' : '🔴'}`}</div>
+        </div>
       ))}
     </>
   )

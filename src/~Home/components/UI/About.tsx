@@ -4,6 +4,7 @@ type infoType = {
   [key: string]: any
 }
 import myPhoto from '../../../assets/graphics/Me Dark Background square.jpg'
+import myCv from '../../../assets/CV Mohamed Ali Ben Thaier 2022 C.pdf'
 const info: infoType = {
   'Full Name': 'Mohamed Ali Ben Thaier',
   Age: 27,
@@ -46,7 +47,13 @@ export default function About() {
               ))}
             </div>
             <div className='mt-auto'>
-              <button className='btn'>Download CV</button>
+              <button className='btn'>
+                {' '}
+                <a href={myCv} style={{ color: 'inherit', textDecoration : 'none' }} download='true'>
+                  {' '}
+                  Download CV
+                </a>
+              </button>
             </div>
           </div>
         </div>

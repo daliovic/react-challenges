@@ -23,6 +23,7 @@ export default function UsersApp() {
   })
   return (
     <UserContext.Provider value={{ users:userState, setUserState }}>
+      I used React Context with Typescript to randomly flip a user's status <br/><br/>
       <User />
     </UserContext.Provider>
   )

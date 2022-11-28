@@ -28,7 +28,7 @@ export default function WordByWord() {
         setCounter(counter + 1)
         setDisplayString(input.slice(0, counter))
       }
-    }, 500)
+    }, 700)
 
     // setDisplayString(inputValue.split(' ').slice(0, counter-1))
 
@@ -43,6 +43,7 @@ export default function WordByWord() {
 
   return (
     <div>
+      <p>When focusing out of the text input, the words will appear one by one </p>
       <input type="text" onChange={changeHandler} onBlur={blurHandler} value={inputValue} ref={inputRef} />
       <p>{`${displayString.join(' ')}`}</p>
 

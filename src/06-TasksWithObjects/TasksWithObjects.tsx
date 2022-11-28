@@ -66,66 +66,72 @@ export default function TasksWithObjects() {
 
   return (
     <LayoutGroup>
-      <motion.div variants={containerVariants} initial='hidden' animate='visible' className={styles['container']}>
-        {Object.entries(list).map((item, ii) => {
-          return (
-            <motion.div
-              variants={headingVariants}
-              initial='hidden'
-              animate='visible'
-              custom={ii}
-              key={item[0]}
-              layout
-              className={styles['task-group']}>
-              <div className={`${styles['category-title']}`}>
-                <p >{item[0]}</p>
-              </div>
-              <motion.div className={`${styles['category-heading']} ${styles.bolder}`}>
-                <div>To be Completed</div>
-                <div>Completed</div>
-              </motion.div>
-              {item[1].map((task: taskType, i: number) => {
-                let t = Object.entries(task)
-                let toBeCompleted = t[0][1] ? t[0] : ''
-                let completed = t[0][1] ? '' : t[0]
+      <div className='d-flex justify-content-center'>
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+          className={`${styles['container']}`}>
+          {Object.entries(list).map((item, ii) => {
+            return (
+              <motion.div
+                variants={headingVariants}
+                initial='hidden'
+                animate='visible'
+                custom={ii}
+                key={item[0]}
+                layout
+                className={`${styles['task-group']}`}>
+                <div className={`${styles['category-title']}`}>
+                  <p>{item[0]}</p>
+                </div>
+                <motion.div className={`${styles['category-heading']} ${styles.bolder}`}>
+                  <div>To be Completed</div>
+                  <div>Completed</div>
+                </motion.div>
+                {item[1].map((task: taskType, i: number) => {
+                  let t = Object.entries(task)
+                  let toBeCompleted = t[0][1] ? t[0] : ''
+                  let completed = t[0][1] ? '' : t[0]
 
-                return (
-                  <motion.div layout key={`${item} ${i}`} className={styles['category-heading']}>
-                    <motion.div
-                      layout
-                      className={completed ? styles.task : ''}
-                      onClick={() => {
-                        if (completed)
-                          setList((prev: listType) => {
-                            let newTasks = [...prev[item[0]]]
-                            newTasks[i] = { [`${t[0][0]}`]: !t[0][1] }
-                            console.log(newTasks, i)
-                            return { ...prev, [item[0]]: newTasks }
-                          })
-                      }}>
-                      {completed}
+                  return (
+                    <motion.div layout key={`${item} ${i}`} className={styles['category-heading']}>
+                      <motion.div
+                        layout
+                        className={completed ? styles.task : ''}
+                        onClick={() => {
+                          if (completed)
+                            setList((prev: listType) => {
+                              let newTasks = [...prev[item[0]]]
+                              newTasks[i] = { [`${t[0][0]}`]: !t[0][1] }
+                              console.log(newTasks, i)
+                              return { ...prev, [item[0]]: newTasks }
+                            })
+                        }}>
+                        {completed}
+                      </motion.div>
+                      <motion.div
+                        layout
+                        className={toBeCompleted ? styles.task : ''}
+                        onClick={() => {
+                          if (toBeCompleted)
+                            setList((prev: listType) => {
+                              let newTasks = [...prev[item[0]]]
+                              newTasks[i] = { [`${t[0][0]}`]: !t[0][1] }
+                              console.log(newTasks, i)
+                              return { ...prev, [item[0]]: newTasks }
+                            })
+                        }}>
+                        {toBeCompleted}
+                      </motion.div>
                     </motion.div>
-                    <motion.div
-                      layout
-                      className={toBeCompleted ? styles.task : ''}
-                      onClick={() => {
-                        if (toBeCompleted)
-                          setList((prev: listType) => {
-                            let newTasks = [...prev[item[0]]]
-                            newTasks[i] = { [`${t[0][0]}`]: !t[0][1] }
-                            console.log(newTasks, i)
-                            return { ...prev, [item[0]]: newTasks }
-                          })
-                      }}>
-                      {toBeCompleted}
-                    </motion.div>
-                  </motion.div>
-                )
-              })}
-            </motion.div>
-          )
-        })}
-      </motion.div>
+                  )
+                })}
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
     </LayoutGroup>
   )
 }

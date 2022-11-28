@@ -11,7 +11,7 @@
 .task-group {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 100%;
   justify-content: center;
 }
 .category-title {

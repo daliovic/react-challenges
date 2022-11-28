@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import bg from '../../../assets/graphics/CardBG.svg'
+import tsicon from '../../../assets/graphics/typescript.svg'
 import PortfolioModal from './PortfolioModal'
+//import typescript icon
 
 export default function PortfolioCard({
   title,
@@ -95,8 +96,13 @@ export default function PortfolioCard({
           )}
         </div>
       </motion.div>
-      <div className=''>
-        <h1>#{index + 1}</h1>
+      <div className='d-flex justify-content-between'>
+        <div>
+          <h1>#{index + 1}</h1>
+        </div>
+        <div>
+          <img src={tsicon} alt='typescript icon' />
+        </div>
       </div>
       <div>
         <p>{title}</p>

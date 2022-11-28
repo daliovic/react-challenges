@@ -30,22 +30,22 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='/about'>
+              <NavLink className='nav-link' to='/'>
                 ABOUT
               </NavLink>
             </li>
-            <li className='nav-item'>
-              <NavLink className='nav-link' to='/resume'>
+            {/* <li className='nav-item'>
+              <NavLink className='nav-link' to='/'>
                 RESUME
               </NavLink>
-            </li>
+            </li> */}
             <li className='nav-item'>
-              <NavLink className='nav-link' to='/portfolio'>
+              <NavLink className='nav-link' to='/'>
                 PORTFOLIO
               </NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='/contact'>
+              <NavLink className='nav-link' to='/'>
                 CONTACT
               </NavLink>
             </li>
